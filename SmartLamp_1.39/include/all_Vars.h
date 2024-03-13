@@ -15,12 +15,10 @@ bool musicFlag=0;
 //***********Für_Handy_App***********
 #define BLYNK_PRINT Serial
 
-#define BLYNK_TEMPLATE_ID "TMPL4sZV8unzN"
+#define BLYNK_TEMPLATE_ID "***"
 #define BLYNK_TEMPLATE_NAME "SmartLamp"
-#define BLYNK_AUTH_TOKEN "UXAC5TiroA1agIgqPI8z2lP4m7m2A92h"
+#define BLYNK_AUTH_TOKEN "***"
 
-//char ssid[] = "Vodafone-0850";
-//char pass[] = "mdqQyNUVyNBx6Lxb";
 
 char ssid[] = "KGB Lan";
 char pass[] = "kgb12345";
