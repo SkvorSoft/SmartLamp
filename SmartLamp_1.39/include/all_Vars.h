@@ -27,7 +27,7 @@ char pass[] = "kgb12345";
 //***********Für_WS2812***********
 #define CURRENT_LIMIT 3000  // mA Strom Limit, 0 - ausschalten
 #define NUM_LEDS 13 
-#define NUM_STRIPS 4        // количество отрезков ленты (в параллели)
+#define NUM_STRIPS 4       
 #define LED_PIN 2
 
 //***********Helligkeit defines***********
