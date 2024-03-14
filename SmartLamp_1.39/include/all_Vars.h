@@ -20,8 +20,8 @@ bool musicFlag=0;
 #define BLYNK_AUTH_TOKEN "***"
 
 
-char ssid[] = "KGB Lan";
-char pass[] = "kgb12345";
+char ssid[] = "***";
+char pass[] = "***";
 
 
 //***********Für_WS2812***********
