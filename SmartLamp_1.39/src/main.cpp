@@ -123,7 +123,7 @@ void setup() {
  Serial.println("DFRobotDemo");
  Serial.println("Initializing DFPlayer ...");
  
- if (!myMusic.begin(mySerial)) { //Использовать серийный порт для взаимодействия
+ if (!myMusic.begin(mySerial)) { 
  Serial.println("Unable to begin:");
  Serial.println("1.Please recheck the connection!");
  Serial.println("2.Please insert the SD card!");
@@ -132,7 +132,7 @@ void setup() {
  Serial.println("DFPlayer Mini online.");
  }
 
-myMusic.volume(20); //Установка громкости. От 0 до 30
+myMusic.volume(20); 
 
 
 
@@ -403,81 +403,7 @@ void loop() {
 }
 
 
-/*  FUNKTIONIERT!
-BLYNK_WRITE(V5){
-  int R = param[0].asInt();
-  int G = param[1].asInt();
-  int B = param[2].asInt();
-  Serial.println(R);
-  Serial.println(G);
-  Serial.println(B);
 
-  for(int i=0;i<NUM_LEDS;i++){
-    leds[i].setRGB(R,G,B);
-     FastLED.show();
-  }
-} 
-
-Diese Funktion funktioniert nicht mehr, weil ADC, an dem PR hängt, während WLAN aktiv ist nicht benutzbar
-
-//***********Helligkeit automatisch***********
-int control=0;
-void dynaMode () {
-
-    if (millis()-lightSensTime>1000 && dynMode==1){
-      lightSensTime=millis();
-    // !!!!!! NACH MONTAGE NOCHMAL JUSTIEREN!!!!!!
-    lightSensVal=analogRead(lightSens);
-    lightSensVal=map(lightSensVal,0,4095,100,600);
-    lightSensVal=constrain(lightSensVal,100,600);
-    Serial.println(lightSensVal);
-    
-    if (lightSensVal<289){
-      //FastLED.setBrightness(MIN_BRIGHTNESS);
-      control=1;
-      //Serial.println(brightness);
-    }
-    else if ((lightSensVal>290) && (lightSensVal <420) ){
-      //FastLED.setBrightness(EVE_BRIGHTNESS);
-     control=2;
-     //Serial.println(brightness);
-    }
-    else if (lightSensVal>420){
-      //FastLED.setBrightness(MAX_BRIGHTNESS);
-      control=3;
-      //Serial.println(brightness);
-    }
-    
-    switch (control)
-    {
-    case 1:
-      FastLED.setBrightness(MIN_BRIGHTNESS);
-      //brightness=10;
-      //FastLED.show();
-      Serial.println(brightness);
-      break;
-    case 2:
-      FastLED.setBrightness(EVE_BRIGHTNESS);
-      //brightness=50;
-      //FastLED.show();
-      Serial.println(brightness);
-      break;
-    case 3:
-      FastLED.setBrightness(MAX_BRIGHTNESS);
-      //brightness=100;
-      //FastLED.show();
-      Serial.println(brightness);
-      break;
-    default:
-      break;
-    }
-    
-   }
-  }
-
-
-
-*/
 
 
 
